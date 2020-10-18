@@ -47,22 +47,23 @@ Rails.application.routes.draw do
   #  - Add some static HTML to mock up the response that you want to send back.
   #  - Write the Ruby to make it dynamic, and work properly.
 
-  # /roll/1/6
-  # /roll/2/6
-  # /roll/3/6
-  # /roll/4/6
-  # /roll/5/6
-  # /roll/6/6
+  get("/roll/1/6", { :controller => "dicesix", :action => "oneroll"})
+  get("/roll/2/6", { :controller => "dicesix", :action => "tworoll"})
+  get("/roll/3/6", { :controller => "dicesix", :action => "threeroll"})
+  get("/roll/4/6", { :controller => "dicesix", :action => "fourroll"})
+  get("/roll/5/6", { :controller => "dicesix", :action => "fiveroll"})
+  get("/roll/6/6", { :controller => "dicesix", :action => "sixroll"})
 
-  # /roll/1/4
-  # /roll/2/4
-  # /roll/3/4
-  # /roll/4/4
-  # /roll/1/8
-  # /roll/2/8
-  # /roll/1/10
-  # /roll/2/10
-  # /roll/1/20
-  # /roll/2/20
-
+  get("/roll/1/4", { :controller => "dicefour", :action => "oneroll"})
+  get("/roll/2/4", { :controller => "dicefour", :action => "tworoll"})
+  get("/roll/3/4", { :controller => "dicefour", :action => "threeroll"})
+  get("/roll/4/4", { :controller => "dicefour", :action => "fourroll"})
+  get("/roll/1/8", { :controller => "diceeight", :action => "oneroll"})
+  get("/roll/2/8", { :controller => "diceeight", :action => "tworoll"})
+  get("/roll/3/8", { :controller => "diceeight", :action => "threeroll"})
+  get("/roll/1/10", { :controller => "dicetentwenty", :action => "onerollten"})
+  get("/roll/2/10", { :controller => "dicetentwenty", :action => "tworollten"})
+  get("/roll/1/20", { :controller => "dicetentwenty", :action => "onerolltwenty"})
+  get("/roll/2/20", { :controller => "dicetentwenty", :action => "tworolltwenty"})
+  get("/roll/3/20", { :controller => "dicetentwenty", :action => "threerolltwenty"})
 end
